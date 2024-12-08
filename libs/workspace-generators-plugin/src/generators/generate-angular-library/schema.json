@@ -10,9 +10,49 @@
       "$default": {
         "$source": "argv",
         "index": 0
+      }
+     
+    },
+    "domain": {
+      "type": "string",
+      "description": "Domain of the library",
+      "$default": {
+        "$source": "argv",
+        "index": 1
       },
-      "x-prompt": "What name would you like to use?"
-    }
-  },
-  "required": ["name"]
+      "x-prompt": {
+        "message": "What domain would you like to use?",
+        "type": "list",
+        "items": [
+          "finance",
+          "hr",
+          "marketing",
+          "inventory",
+          "shared"
+        ]
+      }
+    },
+    "type": {
+      "type": "string",
+      "description": "Type of the library",
+      "$default": {
+        "$source": "argv",
+        "index": 2
+      },
+      "x-prompt": {
+        "message": "What type would you like to use?",
+        "type": "list",
+        "items": [
+          "ui",
+          "data-access",
+          "feature",
+          "util",
+          "all"
+        ]
+      }
+    },
+    "required": [
+      "name","domain","type"
+    ]
+  }
 }
