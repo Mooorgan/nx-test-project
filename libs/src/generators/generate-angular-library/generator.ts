@@ -31,7 +31,7 @@ async function generateLibrary(
   await libraryGenerator(tree, {
     name: options.name,
     simpleName: true,
-    standalone: false,
+    standalone: true,
     buildable: true,
     prefix: `bt-libs-${type}`,
     style: 'scss',
