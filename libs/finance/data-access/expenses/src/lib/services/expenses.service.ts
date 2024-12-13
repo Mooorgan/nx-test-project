@@ -6,4 +6,8 @@ import { Injectable } from '@angular/core';
 export class ExpensesService {
 
   constructor() { }
+
+  sayHi(){
+    console.log('Hi this is me ');
+  }
 }
